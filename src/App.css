@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+div {
+  text-align: center;
+}
+button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
