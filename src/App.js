@@ -1,29 +1,41 @@
-import React from 'react';
-import Counter from './components/Counter';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      count: 0
+      count: 0,
     };
   }
-  
-  decreaseCount = () => { this.setState({count: this.state.count - 1 });}
-  increaseCount = () => { this.setState({count: this.state.count + 1 });}
 
-  render () {
+  render() {
     return (
       <div>
-        <Counter 
-        count={this.state.count}
-        substract = {this.decreaseCount}
-        increment = {this.increaseCount}
-        >
-        </Counter>
+        <h1>Counter</h1>
+        <h2>{this.state.count}</h2>
+        <div className="btn-wrapper">
+          <button
+            onClick={() => {
+              this.setState((prevState) => {
+                return { count: prevState.count - 1,};
+              });
+            }}
+          >
+            -
+          </button>
+          <button
+            onClick={() => {
+              this.setState((prevState) => {
+                return { count: prevState.count + 1,};
+              });
+            }}
+          >
+            +
+          </button>
+        </div>
       </div>
     );
   }
