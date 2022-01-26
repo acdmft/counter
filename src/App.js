@@ -9,6 +9,19 @@ class App extends React.Component {
     this.state = {
       count: 0,
     };
+    this.increment = this.increment.bind(this);
+    this.substract = this.substract.bind(this);
+  }
+
+  increment() {
+    this.setState((prevState) => {
+      return {count: prevState.count + 1};
+    });
+  }
+  substract() {
+    this.setState((prevState) => {
+      return {count: prevState.count - 1};
+    });
   }
 
   render() {
@@ -18,20 +31,12 @@ class App extends React.Component {
         <h2>{this.state.count}</h2>
         <div className="btn-wrapper">
           <button
-            onClick={() => {
-              this.setState((prevState) => {
-                return { count: prevState.count - 1,};
-              });
-            }}
+            onClick={this.substract}
           >
             -
           </button>
           <button
-            onClick={() => {
-              this.setState((prevState) => {
-                return { count: prevState.count + 1,};
-              });
-            }}
+            onClick={this.increment}
           >
             +
           </button>
