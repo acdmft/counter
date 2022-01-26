@@ -11,13 +11,19 @@ class App extends React.Component {
       count: 0
     };
   }
+  
+  decreaseCount = () => { this.setState({count: this.state.count - 1 });}
+  increaseCount = () => { this.setState({count: this.state.count + 1 });}
+
   render () {
     return (
       <div>
-        <Component 
+        <Counter 
         count={this.state.count}
-        increment ={() => {this.setState({count: this.count+1})}>
-        </Component>
+        substract = {this.decreaseCount}
+        increment = {this.increaseCount}
+        >
+        </Counter>
       </div>
     );
   }
