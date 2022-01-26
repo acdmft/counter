@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+## 01 - Compteur
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Dans `App.js` , créez un `state` avec une clé `count` de valeur `0`
+- Placez un titre h1 qui affichera "Counter"
+- Placez un titre h2 contenant la valeur de `count`
+- Placez 2 boutons `-` et `+` avec des backgrounds vert et rouge :
+    - Quand on clique sur `-` , on décrémente le compteur, et la valeur se met à jour à l'écran
+    - Quand on clique sur `+` , on incrémente le compteur, et la valeur se met à jour à l'écran
 
-## Available Scripts
+Pour cela, il vous faudra créer des callback functions dans les évènements `onClick` des boutons, et faire le nécessaire...
 
-In the project directory, you can run:
+## 02 - Compteur V2
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Créer le composant `components/Counter.js`
+- Le render doit contenir une `div` dans laquelle vous collerez :
+    - la balise h2 et les deux boutons (enlevez-les de `App` et appelez le composant `Counter` à la place)
+- Le h2 et les méthodes des boutons utilisent le state et les données du parent... Peut être faudrait-il que le parent les envoie en props et qu'on utilise les props à la place ? Les noms des props seront `count`, `increment` et `substract`
